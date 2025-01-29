@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeShare</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="bootstrap-5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-5.3.1/dist/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css">
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <header>
+    <a href="" class="logo" class="text-dark"> WeShare</a>
+    <nav>
+      <div class="toggl_e" onclick="toggleMenu();"></div>
+      <ul class="menu">
+        <li><a href="#banner">Acceuil</a></li>
+        <li><a href="formation.html">Formations</a></li>
+        <li><a href="contactus.html">Contactez nous</a></li>
+        <!--         <li><a href="aboutus.html">About Us</a></li>
+ -->
+        <li><a href="register.html">S'inscrire</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="banner" class="banner">
+    <div class="containe_r">
+      <div class="arro_w l_e" onclick="prev()">
+        <span class="l_e">&#10094;</span>
+      </div>
+      <div class="slid_e slid_e-1 fad_e">
+        <div class="caption">
+          <h2><span>WeShare</span></h2>
+          <p>votre plateforme de gestion de dons et tontines.</p>
+          <a href="register.html" class="bt_n">S'inscrire</a>
+        </div>
+      </div>
+      <div class="slid_e slid_e-2 fad_e">
+        <div class="caption">
+          <h2>Contactez nous</h2>
+          <p>Vous avez besoin d'aide ?</p>
+          <a href="contactus.html" class="bt_n">Contactez nous</a>
+        </div>
+      </div>
+      <div class="arro_w r_i" onclick="next()">
+        <span class="r_i">&#10095;</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="myModa_l" class="myModa_l">
+    <div class="content">
+      <div class="moda_l" id="moda_l">
+        <span class="close">&times;</span>
+        <h2>Nouveautés <br> sur WeShare?</h2>
+        <a href="register.html" class="b_tn mt-2">S'inscrire</a>
+      </div>
+      <div class="continue" id="continue">
+        <a href="#" class="skip">Continuez sur le site</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="service">
+    <div class="heading">
+      <h1>Nos Services</h1>
+      <p class="text-center">Decouvrez les services que vous offre WeShare</p>
+    </div>
+    <div class=" row content justify-content-center d-flex">
+      <div class="col-3 servicesBx shadow-sm rounded">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>Obtenir des dons</h3>
+        <p>Check our cars model that will take part in the vintage rally race</p>
+        <a href="#cars" class="b_tn">Voir plus</a>
+      </div>
+      <div class=" col-3 servicesBx shadow-sm rounded">
+        <i class="fas fa-book"></i>
+        <h3>Creer une Tontine</h3>
+        <p>Creer des groupes de tontines en un clic et contrôler vos fonds. </p>
+        <a href="qanda.html" class="b_tn">Voir plus</a>
+      </div>
+      <div class="col-4 servicesBx shadow-sm rounded">
+        <i class="fas fa-question"></i>
+        <h3>Posez une question?</h3>
+        <p>Contactez nous pous posez vos questions.</p>
+        <a href="drivers.html" class="b_tn">Voir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 mb-5">
+    <div class="container">
+      <div class="row justify-content-between pt-5 row-cols-2">
+        <div class="col">
+          <img class="propos" src="images/girl_working.jpg" alt="">
+        </div>
+        <div class="col">
+          <h2 style="font-size: 3em;">À propos</h2>
+          <hr class="under">
+          <p class="text-muted fs-6">Chez WeShare, nous croyons en l'importance de l'apprentissage continu et de
+            la croissance personnelle. C'est pourquoi nous avons créé une plateforme dédiée à la vente de formations
+            dans divers domaines, afin de vous aider à développer vos compétences et à atteindre vos objectifs. <br>
+            <br>
+            Notre catalogue de formations couvre une large gamme de sujets, allant du développement personnel et
+            professionnel, à la technologie, au marketing digital, à la santé et au bien-être, et bien plus encore.
+            Chaque formation est conçue par des experts dans leur domaine, garantissant un contenu de qualité et des
+            connaissances pratiques que vous pouvez appliquer immédiatement. <br> <br>
+            En plus de nos formations, nous proposons également une sélection de produits affiliés soigneusement choisis
+            pour compléter votre apprentissage et améliorer votre expérience utilisateur. Que vous cherchiez des outils
+            de productivité, des livres recommandés, ou des gadgets technologiques, nous avons quelque chose pour vous.
+          </p>
+          <hr class="under">
+          <p class="text-muted fst-italic text-end fs-6">est 2020</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-lg-start text-dark" style="background-color: #abacad;">
+    <div class="molar d-flex justify-content-between p-4 text-white" style="background-color:#d7263d;">
+      <div class="me-5">
+        <span>Restez connecté avec nous :</span>
+      </div>
+
+      <div>
+        <a href="" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4 text-decoration-none">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">WeShare</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px;" />
+          <p>
+            Politiques et confidentialités
+          </p>
+        </div>
+
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">Liens utiles</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px;" />
+          <p>
+            <a href="#!" class="text-dark text-decoration-none">
+              Acceuil
+            </a>
+          </p>
+          <p>
+            <a href="#!" class="text-dark text-decoration-none">
+              Nos Formations
+            </a>
+          </p>
+          <p>
+            <a href="#!" class="text-dark text-decoration-none">
+              Besoin d'aide?
+            </a>
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px;" />
+          <p>
+            <i class="fas fa-envelope mr-3"></i>
+            info@example.com
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i>
+            + 00 00 00 00
+          </p>
+          <p>
+            <i class="fas fa-print mr-3"></i>
+            + 00 000 00 00
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center text-white p-3" style="background-color: #141414;">
+      © 2020 Copyright:
+      <a class="text-white" href="">
+        ecomshop.com
+      </a>
+    </div>
+  </footer>
+
+
+  <script src="bootstrap-5.3.1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // header and menu
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('header');
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+    function toggleMenu() {
+      var menuToggle = document.querySelector('.toggl_e');
+      var menu = document.querySelector('.menu');
+      var header = document.querySelector('header');
+      menuToggle.classList.toggle('active')
+      menu.classList.toggle('active')
+      header.classList.toggle('sticky');
+    }
+
+    // modal popup
+    var modal = document.getElementById("myModa_l");
+    var span = document.getElementsByClassName("close")[0];
+    var skip = document.getElementsByClassName("skip")[0];
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    skip.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // slideshow
+    let slide = document.querySelectorAll('.slid_e');
+    var current = -1;
+    next();
+
+    function cls() {
+      for (let i = 0; i < slide.length; i++) {
+        slide[i].style.display = 'none';
+      }
+    }
+
+
+    function next() {
+      cls();
+      if (current === slide.length - 1) current = -1;
+      current++;
+
+      slide[current].style.display = 'block';
+      setTimeout(next, 9000);
+
+    }
+
+    function prev() {
+      cls();
+      if (current === 0) current = slide.length;
+      current--;
+
+      slide[current].style.display = 'block';
+    }
+
+    function start() {
+      cls();
+      slide[current].style.display = 'block';
+    }
+    start();
+
+  </script>
+</body>
+
+</html>
