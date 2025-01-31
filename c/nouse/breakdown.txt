@@ -1,0 +1,50 @@
+DDW assignment breakdown
+
+	vintage car rally website
+
+-rally taking place in 5 selected countries.
+-website allows to find out details about the rally have updates and buy tickets.
+-no payments and bookings online for now.
+-website visual and compatible on diff platforms.
+
+
+	requirements for the website's contents
+
+-HOME PAGE:
+	_introduce to VRC, relevant images
+	_minimal text, visual used to break up the written content
+	_nav. bar, slide show, header, sections, footer.
+	_modal popup window displayed on top of the current page.
+
+-CONTACT US:
+	_spectators contact the VRC
+	_responsive contact session (fname, lname, country and submit button)
+
+-ABOUT US:
+	_overview of the V CAR Company (who they are and what they do)
+	_responsive page that resizes
+
+-Q&A:
+	_forum where registered members can ask q.
+	_animated search button
+
+-REGISTER ONLINE:
+	_overview of 3 diff stages of the R and the countries
+	_online booking form through email designed to include accessibility features to complete form
+
+-OUR DRIVERS:
+	_list of the current drivers including a responsive image grid with transparent text
+
+- 3 or more multimedia components in the website
+
+
+
+TASK 1 HTML
+
+
+
+Task 2 CSS
+
+Task 3 test
+
+Task 4 critical evaluation

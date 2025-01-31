@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&F</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header  class="sticky1">
+        <a href="" class="logo"> Vintage Rally Club</a>
+        <nav>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="qanda.html">Q&A</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="drivers.html">Our Drivers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="myModal" class="myModal">
+        <div class="box1">
+            <form>
+                <h2>Login</h2>
+                <div class="inputBox">
+                    <input type="text" name="UsernameEmail" required>
+                    <label>Username or Email</label>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="password" required>
+                    <label>password</label>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login" class="btn cont">
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+        
+    <section class="forum">
+        <div class="search-box">
+            <div>
+                <h1>Q & A</h1>
+            </div>
+            
+                <div>
+                    <input type="text" name="q" placeholder="search ...">
+                    <button>search</button>
+                </div>
+        </div>
+        <div class="comment">
+            <form>
+                <label for="textarea">Comment</label><br>
+                <textarea name="textarea" id="textarea" cols="40" rows="5"></textarea>
+            </form>
+        </div>
+        <div class="contain">
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-car center"></i>
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h4><a href="#">A look ahead</a></h4>
+                        <p>Disappointing Ferrari F1-75 feels disjointed. What is clear is that Ferrari has headed down a different avenue to the rest. The key question is whether that avenue leads to where it...</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span></span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        <b><a href="">Today</a></b> <small>by</small>  <a href="">Gary Anderson</a> 
+                        <br><small>on</small>  <small>05 Jav 2022</small>
+                    </div>
+                </div>
+            </div>
+            <!--More-->
+            
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-car center"></i>
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h4><a href="#">Race decision regarding 2022....</a></h4>
+                        <p>I'm still up in the air as to why the Sprints exist myself. Even with the new points system it seems to be a lot of potential work for the payout, and possible disaster if a car torpedos up the...</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span></span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        <b><a href="">13 feb 2022</a></b> by <a href="">Steven kwesi</a> 
+                        <br>on <small>02 Dec 2021</small>
+                    </div>
+                </div>
+                <hr class="subforum-devider">
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-car center"></i>
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h4><a href="#">car launches</a></h4>
+                        <p>Massive molding on the top of the side pods. Already being called "ponds, lakes, craters, etc" and who knows what else. Many different theories on what they are going with here, but the general....</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span></span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        <b><a href="">12 fev 2022</a></b> by <a href="">Isaac Guallardo</a> 
+                        <br>on <small>25 Dec 2021</small>
+                    </div>
+                </div>
+                <hr class="subforum-devider">
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-car center"></i>
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h4><a href="#">Ferrari career</a></h4>
+                        <p>I was waiting until it was official. It sure does look different. Who got it right..... I'm not sure. But it seems Ferrari have taken (yet another) unique approach to the car and side pod...</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span></span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        <b><a href="">11 fev 2022</a></b> by <a href="">David Meros</a> 
+                        <br>on <small>02 fev 2022</small>
+                    </div>
+                </div>
+                <hr class="subforum-devider">
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-car center"></i>
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h4><a href="#">use of private plate</a></h4>
+                        <p>So the story behind this is: growing up I was a huge rally fan (I still am), I followed the likes of Robert Burns, Colin McRae, Carlos Sainz Sr, Tommi Mäkinen and numerous others. Around 1999, I convinced my dad to buy a UK spec Impreza Turbo (see photos) and he decided to buy a private plate for it.</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span></span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        <b><a href="">04 October 2022</a></b> by <a href="">Jackson barry</a> 
+                        <br>on <small> 31 sept 2021</small>
+                    </div>
+              
+                </div>
+            </div>
+            
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column center">
+                        <i class="fa fa-car center"></i>
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h4><a href="#">how to get a vintage car</a></h4>
+                        <p>Get a car. The easiest and often cheapest way is to buy a second hand one. There are often cars for sale on e-bay, and most of the rallycross websites have for sale sections. However if you would like to build your own, the regulations are available to download from the BTRDA & MDA website. This forum is also a good place to come for advice and information.
+                            .</p>
+                    </div>
+                    <div class="subforum-stats subforum-column center">
+                        <span></span>
+                    </div>
+                    <div class="subforum-info subforum-column">
+                        <b><a href="">15 nov 2021</a></b> by <a href="">Melissa Douah</a> 
+                        <br>on <small> 05 nov 2021</small>
+                    </div>
+    
+                </div>
+    
+               
+            </div>
+            <!---->
+        </div>
+    </section>
+
+    <footer>
+        <div class="flinks">
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="qanda.html">Q&A</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="drivers.html">Our Drivers</a></li>
+            </ul>                 
+        </div>
+
+        <div class="fcopyright">
+          
+            &copy;Copyright Vintage Rally Club 2022
+          
+        </div>
+
+        <div class="socialMedia">
+                
+            <a href="https://www.facebook.com" target="_blank" class="face"></a>
+          
+          
+            <a href="https://www.instagram.com" target="_blank" class="insta"></a>
+          
+          
+            <a href="https://www.twitter.com" target="_blank" class="twit"></a>
+          
+        </div>
+      
+
+    </footer>  
+
+    <script>
+        // header and menu
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            var header = document.querySelector('header');
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
+            header.classList.toggle('sticky');
+        }
+
+        // modal popup
+        var modal = document.getElementById("myModal");
+        var skip = document.getElementsByClassName("cont")[0];
+
+        
+
+        skip.onclick = function(){
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+        }
+
+        
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="sticky1">
+        <a href="" class="logo"> Vintage Rally Club</a>
+        <nav>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="qanda.html">Q&A</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="drivers.html">Our Drivers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <div class="inner-container">
+            <h1>About Us</h1>
+            <p class="text">
+                Created in 2010, the Vintage Car Company was founded by Ymir Fritz. In this company, we deal with everything about vintage rally. our goal is to perpetuate the vintage aspect of rally races.
+            </p>
+            <div class="skills">
+                <span>vintage rally related event organisation</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="heading">
+            <h2>Who are we?</h2>
+        </div>
+        <div class="content">
+            <div class="service">
+                <div class="heading">
+                    <h1>Our Staff</h1>
+                    <p>Discover the most important member of the company</p>
+                  </div>
+                  <div class="content">
+                    <div class="servicesBx">
+                      <img src="images/Graham-Hill.jpg" alt="" class="img">
+                      <h3>Eren Jaeger</h3>
+                      <p>He is the founder of the company</p>
+                    </div>
+                    <div class="servicesBx">
+                      <img src="images/Jim-Clark.jpg" alt="" class="img">
+                      <h3>Ymir Fritz</h3>
+                      <p>He is the co-founder of the company</p>
+                    </div>
+                    <div class="servicesBx">
+                      <img src="images/lancestroll.jpg" alt="" class="img">
+                      <h3>Gojo satoru</h3>
+                      <p>He is the CEO of the company</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="heading">
+            <h2>What do we do?</h2>
+        </div>
+        <div class="content">
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
+            </p>
+
+            
+                <video autoplay muted loop>
+                    <source src="images/about_us.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="flinks">
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="qanda.html">Q&A</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="drivers.html">Our Drivers</a></li>
+            </ul>                 
+        </div>
+
+        <div class="fcopyright">
+          
+            &copy;Copyright Vintage Rally Club 2022
+          
+        </div>
+
+        <div class="socialMedia">
+                
+            <a href="https://www.facebook.com" target="_blank" class="face"></a>
+          
+          
+            <a href="https://www.instagram.com" target="_blank" class="insta"></a>
+          
+          
+            <a href="https://www.twitter.com" target="_blank" class="twit"></a>
+          
+        </div>
+      
+
+    </footer>  
+
+    <script>
+        // header and menu
+        window.addEventListener('scroll',function(){
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            var header = document.querySelector('header');
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
+            header.classList.toggle('sticky');
+        }
+
+        // modal popup
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        var skip = document.getElementsByClassName("skip")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        skip.onclick = function(){
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+        }
+
+        
+    }
+
+    </script>
+</body>
+</html>
