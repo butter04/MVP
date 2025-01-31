@@ -1,0 +1,102 @@
+section {
+    min-height: 90vh;
+    /* margin-top: 20vh; */
+}
+
+.sus {
+    transition:0.5s
+}
+
+.sus:hover {
+  background-color: #999850;
+  color: white;
+
+}
+
+.icon {
+    font-size: 60px;
+}
+
+.bt {
+    transition: 0.5s;
+    color: black;
+    font-size: 16px;
+    padding: 5px 15px;
+}
+
+.bt:hover {
+    color: #fff;
+    box-shadow: 0 3px 15px #282727;
+    border-radius: 5px;
+
+}
+
+.og {
+    font-weight: bold;
+    color: #999850;
+}
+
+.og-bt {
+    background-color: #999850;
+    padding: 15px 15px;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.og-bt:hover {
+    background-color: #deb161;
+    box-shadow: 0 3px 15px #deb161;
+    border-radius: 5px;
+}
+
+.stat{
+    background-color: #999850;
+    padding: 21px 55px;
+    border-radius: 5px;
+}
+
+.stat-2{
+    background-color: #deb161;
+     padding: 21px 55px;
+    border-radius: 5px;
+}
+
+.stat-3 {
+    background-color: #626121;
+     padding: 21px 55px;
+    border-radius: 5px;
+}
+
+.dn {
+    background-color: #999850;
+    transition: 0.5s;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dn:hover {
+    background-color: transparent;
+    color: #999850;
+    box-shadow: 0 3px 15px #999850;
+}
+
+.d {
+    border: 2px solid  #999850;
+    transition: 0.5s;
+    padding: 4px;
+    color: #999850;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+.d:hover {
+    background-color: #999850;
+    color: #fff;
+    box-shadow: 0 3px 15px #999850;
+    border-radius: 5px;
+}
