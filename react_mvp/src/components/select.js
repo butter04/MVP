@@ -18,17 +18,15 @@ const Select = () => {
         </div>
         <div className="row row-cols-2 justify-center column-gap-5">
           <div className="col-3 p-3 sus shadow-lg rounded">
-            <div className="row justify-center p-3 mb-4">
+            <div className="row justify-center p-3 mb-3">
               <span className="icon">
                 <FontAwesomeIcon icon={faCoins} />
               </span>
             </div>
-            <h3 className="m-3">Obtenir des Fonds</h3>
-            <p>
-              Inscrivez vous et tentez d'obtenir une donation pour votre projet.
-            </p>
+            <h3 className="m-3">Get Funds</h3>
+            <p>Sign up and try to get a donation for your project. </p>
             <Link to="/ong">
-              <button className="bt mt-3">S'inscrire</button>
+              <button className="bt mt-3">Sign up</button>
             </Link>
           </div>
           <div className="col-3 sus shadow-lg rounded">
@@ -37,13 +35,12 @@ const Select = () => {
                 <FontAwesomeIcon icon={faHandHoldingDollar} />
               </span>
             </div>
-            <h3 className="m-3">Faire une Donation</h3>
+            <h3 className="m-3">Make a Donation</h3>
             <p>
-              Inscrivez vous et fait une donation pur aider à l'aboutissement
-              d'un projet
+              Register and make a donation to help a project come to fruition
             </p>
-            <Link to="/login">
-              <button className=" bt mt-3">S'inscrire</button>
+            <Link to="/register">
+              <button className=" bt mt-3">Sign up</button>
             </Link>
           </div>
         </div>
