@@ -6,8 +6,9 @@ import Ong from './components/ong.js';
 import Donate from './components/donate.js';
 import DonationDashboard from './components/dashboard.js';
 import VerificationResult from './components/bankcheck.js';
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login  from './components/login.js';
+import Register from './components/register.js';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route path="/donate" element={<Donate />} />
           <Route path="/donateDashboard" element={<DonationDashboard />} />
           <Route path="/checkBank" element={<VerificationResult />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
       {/* <Select /> */}

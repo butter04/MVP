@@ -42,7 +42,7 @@ const Select = () => {
               Inscrivez vous et fait une donation pur aider à l'aboutissement
               d'un projet
             </p>
-            <Link to="/donateDashboard">
+            <Link to="/login">
               <button className=" bt mt-3">S'inscrire</button>
             </Link>
           </div>
