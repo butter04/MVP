@@ -5,6 +5,7 @@ import Select from './components/select.js';
 import Ong from './components/ong.js';
 import Donate from './components/donate.js';
 import DonationDashboard from './components/dashboard.js';
+import VerificationResult from './components/bankcheck.js';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/ong" element={<Ong />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/donateDashboard" element={<DonationDashboard />} />
+          <Route path="/checkBank" element={<VerificationResult />} />
         </Routes>
       </Router>
       {/* <Select /> */}

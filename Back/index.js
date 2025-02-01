@@ -40,7 +40,7 @@ const swaggerOptions = {
 const PORT = process.env.PORT || 8080;
 const corsOptions = {
     origin: (origin, callback) => {
-      const allowedOrigins = ['http://localhost:8081', 'http://localhost:5000'];
+      const allowedOrigins = ['http://localhost:3000', 'http://localhost:8080'];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {

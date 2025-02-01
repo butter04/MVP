@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import "./somecss.css";
-
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Ong = () => {
+  const navigate = useNavigate();
+  const [isLoading, setIsloading] = useState(false);
   const [formData, setFormData] = useState({
     organizationName: "",
     email: "",
     address: "",
     bankAccount: "",
-    description: "",
+    bankCode: "", // New field
   });
 
-  const [validated, setValidated] = useState(false);
+  const [validated, setValidated] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,20 +23,70 @@ const Ong = () => {
       ...prevState,
       [name]: value,
     }));
+    // Clear error when user starts typing again
+    setError(null);
   };
 
-  const handleSubmit = (event) => {
+  const verifyBankAccount = async () => {
+    try {
+      console.log("ok");
+      // console.log("🔄 Verifying bank account...");
+      setIsloading(true);
+      const response = await axios.get(
+        "http://localhost:8080/api/accounts/checkcards",
+        {
+          params: {
+            accountId: formData.bankAccount,
+            bankCode: formData.bankCode,
+          }
+        }
+      );
+      console.log(formData.bankAccount);
+      console.log(formData.bankCode);
+      // Store the verification response in the state to pass to the next page
+      console.log(response.data);
+
+      return response.data;
+    } catch (err) {
+      throw new Error(
+        // console.log("ok"),
+        err.response?.data?.message || "Failed to verify bank account"
+      );
+    } finally {
+      setIsloading(false);
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    // console.log("🚀 Form submitted");
     const form = event.currentTarget;
 
     if (form.checkValidity() === false) {
+      // console.warn("⚠️ Form validation failed");
       event.stopPropagation();
-    } else {
-      // Here you would typically send the data to your backend
-      console.log("Form submitted:", formData);
+      setValidated(true);
+      return;
     }
 
-    setValidated(true);
+    try {
+      // Verify bank account first
+      const verificationResult = await verifyBankAccount();
+
+      // If verification successful, proceed with form submission
+      console.log("Form submitted:", formData);
+
+      // Navigate to result page with both form data and verification result
+      navigate("/checkBank", {
+        state: {
+          formData,
+          verificationResult,
+        },
+      });
+    } catch (err) {
+      setError(err.message);
+      setValidated(false);
+    }
   };
 
   return (
@@ -40,12 +94,17 @@ const Ong = () => {
       <div className="container mt-5">
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <div className="shadow-md rounded-sm bg-light-stuble">
+            <div className="shadow-md rounded-sm">
               <div className="">
                 <h3 className="mb-4 og">Organization Donation Form</h3>
               </div>
               <div className="p-5">
-                <form noValidate validated={validated} onSubmit={handleSubmit}>
+                {error && (
+                  <div className="alert alert-danger" role="alert">
+                    {error}
+                  </div>
+                )}
+                <form onSubmit={handleSubmit}  validated={validated}>
                   {/* Organization Name */}
                   <div className="mb-4">
                     {/* <label htmlFor="organizationName" className="form-label">
@@ -91,14 +150,14 @@ const Ong = () => {
                     {/* <label htmlFor="address" className="form-label">
                     Address *
                   </label> */}
-                    <textarea
+                    <input
                       className="form-control"
                       id="address"
                       name="address"
                       value={formData.address}
                       onChange={handleChange}
                       required
-                      rows="3"
+                      rows=""
                       placeholder="Enter complete address"
                     />
                     <div className="invalid-feedback">
@@ -128,12 +187,31 @@ const Ong = () => {
                     </div>
                   </div>
 
+                  <div className="mb-3">
+                    {/* <label htmlFor="bankCode" className="form-label">
+                      Bank Code *
+                    </label> */}
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="bankCode"
+                      name="bankCode"
+                      value={formData.bankCode}
+                      onChange={handleChange}
+                      required
+                      placeholder="Enter bank code"
+                      pattern="[0-9]{3,}"
+                    />
+                    <div className="invalid-feedback">
+                      Please provide a valid bank code.                    </div>
+                  </div>
+
                   {/* Description */}
-                  <div className="mb-4">
-                    {/* <label htmlFor="description" className="form-label">
+                  {/* <div className="mb-4"> */}
+                  {/* <label htmlFor="description" className="form-label">
                     Organization Description
                   </label> */}
-                    <textarea
+                  {/* <textarea
                       className="form-control"
                       id="description"
                       name="description"
@@ -142,7 +220,7 @@ const Ong = () => {
                       rows="6"
                       placeholder="Describe your organization and how the donations will be used"
                     />
-                  </div>
+                  </div> */}
 
                   <div className="mb-3">
                     <div className="form-check">
@@ -182,8 +260,23 @@ const Ong = () => {
 
                   {/* Submit Button */}
                   <div className="d-grid gap-2">
-                    <button type="submit" className="btn-lg og-bt rounded-md">
-                      Submit Application
+                    <button
+                      type="submit"
+                      className="btn-lg og-bt rounded-md"
+                      disabled={isLoading}
+                    >
+                      {isLoading ? (
+                        <>
+                          <span
+                            className="spinner-border spinner-border-sm me-2"
+                            role="status"
+                            aria-hidden="true"
+                          ></span>
+                          Verifying...
+                        </>
+                      ) : (
+                        "Submit Application"
+                      )}
                     </button>
                   </div>
                 </form>
